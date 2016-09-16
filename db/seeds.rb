@@ -1,1 +1,1 @@
-User.create(score: 0)
+User.create(score: 0, name: "Anonymous")
