@@ -1,23 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <!-- 
-    normalize.css removes cross-browser differences in defaults, e.g.,
-    differences in how form elements appear between Firefox and IE
-    See: http://necolas.github.com/normalize.css/
-  -->
-  <link rel="stylesheet" href="/css/normalize.css">
-  <!--
-    application.css is where you put your styles
-  -->
-  <link rel="stylesheet" href="/css/application.css">
+  <title>Javascript practice</title>
 
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-  <script src="/js/application.js"></script>
-
-  <title></title>
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+  <link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css">
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+  <script src="js/application.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 </head>
 <body>
-  <%= yield %>
+  <div class="score"></div>
+  <div id="high-score">High-Score: <span class="high-score"><%= @user.score %></span> </div>
+  <div class="cloud-container">
+     <div id="clouds"><img src="img/clouds.png" height="110%" width="110%"></div>
+     <div id="grass1"><img src="img/grass.png"></div>
+      <div id="grass4"><img src="img/grass.png"></div>
+      <div id="img/grass-scroll"></div>
+     <div id="bird"><img src="img/bird-flying.gif" height="30"></div>
+  </div>
+  <div class="missile"><img src="img/missile.gif" height="30" ></div>
+  <div id="background"></div>
+  <div id='box' ><img src="img/cartoon-helicopter.gif"  height="100"> </div>
+  <div id="dialog-confirm" title="You Crashed!">
+    <p><span class="ui-icon ui-icon-alert" style="float:left; margin:12px 12px 20px 0;"></span> </p>
+  </div>
 </body>
 </html>

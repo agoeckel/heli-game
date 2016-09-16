@@ -1,0 +1,211 @@
+ body, html{
+  width:100%;
+  margin:0;
+  padding:0;
+  overflow: hidden;
+  background-color:#fff;
+}
+
+.cloud-container{
+  width:100%;
+  height:100%;
+  overflow:hidden;
+  position:absolute;
+}
+
+#box {
+  position: absolute;
+  margin-left: 200px;
+  z-index: 3;
+}
+
+#background {
+  position: absolute;
+  background-color: lightblue;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+#clouds {
+  width: 100%;
+  height: 60%;
+  opacity: 0.75;
+  position: absolute;
+  top: 1%;
+  right: 100%;
+  overflow: visible;
+  z-index: 2;
+  animation-name:cloudMove1;
+  animation-duration:10s;
+  animation-timing-function:linear;
+  animation-delay:0s;
+  animation-iteration-count:infinite;
+  animation-direction:normal;
+  animation-play-state:running;
+
+  /* Safari and Chrome: */
+  -webkit-animation-name:cloudMove1;
+  -webkit-animation-duration:10s;
+  -webkit-animation-timing-function:linear;
+  -webkit-animation-delay:0s;
+  -webkit-animation-iteration-count:infinite;
+  -webkit-animation-direction:normal;
+  -webkit-animation-play-state:running;
+}
+
+@keyframes cloudMove1 {
+  0% { right: -100%; }
+  100% { right: 100%; }
+}
+
+@-webkit-keyframes cloudMove1 {
+  0% { right: -100%; }
+  100% { right: 100%; }
+}
+
+#bird {
+  position: absolute;
+  top: 80%;
+  right: 100%;
+  overflow: visible;
+  z-index: 1;
+  animation-name:birdMove1;
+  animation-duration:30s;
+  animation-timing-function:linear;
+  animation-delay:0s;
+  animation-iteration-count:infinite;
+  animation-direction:normal;
+  animation-play-state:running;
+
+  /* Safari and Chrome: */
+  -webkit-animation-name:birdMove1;
+  -webkit-animation-duration:30s;
+  -webkit-animation-timing-function:linear;
+  -webkit-animation-delay:0s;
+  -webkit-animation-iteration-count:infinite;
+  -webkit-animation-direction:normal;
+  -webkit-animation-play-state:running;
+}
+
+@keyframes birdMove1 {
+  0% { right: -100%; }
+  100% { right: 100%; }
+}
+
+@-webkit-keyframes birdMove1 {
+  0% { right: -100%; }
+  100% { right: 100%; }
+}
+
+#grass1 {
+  position: absolute;
+  top: 90%;
+  left: 30%;
+  z-index: 2;
+}
+
+#grass4 {
+  position: absolute;
+  right: 30%;
+  top: 90%;
+  z-index: 2;
+}
+
+
+
+.missile {
+  display: none;
+  transform: rotate(180deg);
+  top: 94%;
+  position: absolute;
+  float: right;
+  width: 40px;
+  height: 15px;
+  z-index: 2;
+}
+
+
+.rocket {
+  transform: rotate(180deg);
+  position: absolute;
+  float: right;
+  width: 40px;
+  height: 50px;
+}
+
+.score {
+  left: 10px;
+  width: 300px;
+  position: absolute;
+  font-size: 1.5em;
+}
+
+#high-score {
+  position: absolute;
+  right: 40px;
+  font-size: 1.5em;
+}
+
+#dialog-confirm{
+  position: absolute;
+}
+
+.ui-dialog-titlebar-close {
+  visibility: hidden;
+}
+
+/*
+#grass-scroll {
+  width: 100%;
+  background: url(http://www.hydrosaat.com/wp-content/themes/parallax_fun/images/grass.png);
+  -webkit-animation: backgroundScroll 20s linear infinite;
+  animation: backgroundScroll 20s linear infinite;
+}
+
+@-webkit-keyframes backgroundScroll {
+from {background-position: 0 0;}
+to {background-position: -100% 0;}
+}
+
+@keyframes backgroundScroll {
+from {background-position: 0 0;}
+to {background-position: -100% 0;}
+}*/
+
+
+/*#grass2{
+  position: absolute;
+  top: 90%;
+  right: 100%;
+  overflow: visible;
+  z-index: 1;
+
+  animation-name:grassMove2;
+  animation-duration:10s;
+  animation-timing-function:linear;
+  animation-delay:0s;
+  animation-iteration-count:infinite;
+  animation-direction:normal;
+  animation-play-state: paused;
+
+
+  -webkit-animation-name:grassMove2;
+  -webkit-animation-duration:20s;
+  -webkit-animation-timing-function:linear;
+  -webkit-animation-delay:0s;
+  -webkit-animation-iteration-count:infinite;
+  -webkit-animation-direction:normal;
+  -webkit-animation-play-state:running;
+}
+
+@keyframes grassMove2 {
+  0% { right: -100%; }
+  100% { right: 100%; }
+}
+
+@-webkit-keyframes grassMove2 {
+  0% { right: -100%; }
+  100% { right: 100%; }
+}
+*/
