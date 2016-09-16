@@ -8,7 +8,10 @@ function Rocket() {
   this.area = Math.floor((Math.random() * 800) + 1);
 }
 
-rounds = Math.floor((Math.random() * 10) + 8);
+ditto = 8
+rounds = Math.floor((Math.random() * 10) + ditto);
+
+
 
 function createRockets(rounds){
   rockets = []
@@ -22,6 +25,9 @@ function createRockets(rounds){
 function scoreTimer() {
   if (crashed === true) { return; }{
     score += 1
+      if(score === 1000){
+        ditto += 10
+      }
      $(".score").html("<div class='score'>score: "+score+"</div>")
    setTimeout(scoreTimer, 10);
   }
