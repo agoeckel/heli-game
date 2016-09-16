@@ -65,9 +65,14 @@ function animation(id){
       var missile = parseInt(marginTop, 10)
       var top = missile + 50
       var bottom = missile - 50
+      var heli = $("#box").offset().left
+      var viewWidth = window.innerWidth
+      var heliWidthPosition = viewWidth - heli
+      var heliTop = heliWidthPosition - 20
+      var heliBottom = heliWidthPosition + 20
 
     if((bottom < time) && (time < top) === true){
-      if((parseInt(right, 10) >= 1000) && (parseInt(right, 10) <= 1040)){
+      if((parseInt(right, 10) >= heliTop) && (parseInt(right, 10) <= heliBottom)){
         if(crashed === false){
           $("#box").html("<img src=img/explosion.gif-c200>")
           crashed = true
@@ -96,6 +101,7 @@ function animation(id){
 function timeBackward (){
   if (click === false || time === 0) { return; }
   time -= 3
+
   setTimeout(timeBackward, 1);
   $('#box').css('margin-top', time);
   $('#box').css('-webkit-transform', 'rotate(-7deg)')
