@@ -36,13 +36,15 @@ function scoreTimer() {
 function highScoreCheck() {
   var currentHighScore = $(".high-score").text()
   console.log(currentHighScore)
+  console.log(score)
   if(currentHighScore < score){
+    var name = prompt("Enter name to save High-score")
     var currentScore = score.toString()
     $(".high-score").text(score);
   $.ajax({
      url: "/",
      method: "POST",
-     data: { score: currentScore }
+     data: { score: currentScore, name: name }
    })
     .done(function(response){
     });
@@ -122,6 +124,7 @@ function timeForward (){
     if(crashed === false){
     $("#box").html("<img src=img/explosion.gif-c200>")
     crashed = true
+    highScoreCheck()
     window.setInterval(function(){
     $( "#dialog-confirm" ).dialog({
         resizable: false,

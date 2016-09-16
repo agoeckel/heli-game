@@ -11,7 +11,7 @@
 </head>
 <body>
   <div class="score"></div>
-  <div id="high-score">High-Score: <span class="high-score"><%= @user.score %></span> </div>
+  <div id="high-score">High-Score: <span class="high-score"><%= @user.score %></span>  By: <%= @user.name.upcase %></div>
   <div class="cloud-container">
      <div id="clouds"><img src="img/clouds.png" height="110%" width="110%"></div>
      <div id="grass1"><img src="img/grass.png"></div>

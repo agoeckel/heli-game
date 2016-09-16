@@ -1,11 +1,11 @@
 get '/' do
   @user = User.find(1)
-  session[:score] =
   erb :layout
 end
 
 post '/' do
+  p params
   @user = User.find(1)
-  @user.update_attribute(:score, params[:score])
+  @user.update(score: params[:score], name: params[:name])
   redirect '/'
 end
