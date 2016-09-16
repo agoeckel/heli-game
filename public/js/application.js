@@ -73,6 +73,8 @@ function animation(id){
 
     if((bottom < time) && (time < top) === true){
       if((parseInt(right, 10) >= heliTop) && (parseInt(right, 10) <= heliBottom)){
+        console.log(heliTop + "helitop")
+        console.log(heliBottom + "heliBottom")
         if(crashed === false){
           $("#box").html("<img src=img/explosion.gif-c200>")
           crashed = true
@@ -110,7 +112,7 @@ function timeBackward (){
 function timeForward (){
   if (unClick === false || time >= window.innerHeight - 96 ) { return; }
     time += 3
-  if(time === (window.innerHeight - 96)){
+  if((time === (window.innerHeight - 96)) || (time >= (window.innerHeight - 100))){
     if(crashed === false){
     $("#box").html("<img src=img/explosion.gif-c200>")
     crashed = true
