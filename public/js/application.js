@@ -67,7 +67,7 @@ function animation(id){
       var bottom = missile - 50
 
     if((bottom < time) && (time < top) === true){
-      if((parseInt(right, 10) >= 1390) && (parseInt(right, 10) <= 1440)){
+      if((parseInt(right, 10) >= 1000) && (parseInt(right, 10) <= 1040)){
         if(crashed === false){
           $("#box").html("<img src=img/explosion.gif-c200>")
           crashed = true
